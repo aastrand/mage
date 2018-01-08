@@ -27,7 +27,6 @@
  */
 package mage.cards.c;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldTappedAbility;
 import mage.abilities.costs.mana.ManaCostsImpl;
 import mage.abilities.keyword.CyclingAbility;
@@ -37,6 +36,8 @@ import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.SubType;
+
+import java.util.UUID;
 
 /**
  *
@@ -55,7 +56,7 @@ public class CanyonSlough extends CardImpl {
         this.addAbility(new RedManaAbility());
 
         // Canyon Slough enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // Cycling {2}
         this.addAbility(new CyclingAbility(new ManaCostsImpl("{2}")));

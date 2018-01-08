@@ -66,7 +66,7 @@ public class SapseepForest extends CardImpl {
         this.addAbility(new GreenManaAbility());
 
         // Sapseep Forest enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {G}, {tap}: You gain 1 life. Activate this ability only if you control two or more green permanents.
         Ability ability = new ConditionalActivatedAbility(Zone.BATTLEFIELD,

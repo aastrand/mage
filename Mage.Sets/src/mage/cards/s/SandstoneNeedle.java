@@ -55,7 +55,7 @@ public class SandstoneNeedle extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Sandstone Needle enters the battlefield tapped with two depletion counters on it.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new EntersBattlefieldAbility(new AddCountersSourceEffect(CounterType.DEPLETION.createInstance(2))));
         // {tap}, Remove a depletion counter from Sandstone Needle: Add {R}{R} to your mana pool. If there are no depletion counters on Sandstone Needle, sacrifice it.
         Ability ability = new SimpleManaAbility(Zone.BATTLEFIELD, Mana.RedMana(2), new TapSourceCost());

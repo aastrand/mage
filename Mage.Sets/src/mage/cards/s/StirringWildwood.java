@@ -53,7 +53,7 @@ public class StirringWildwood extends CardImpl {
 
     public StirringWildwood(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new GreenManaAbility());
         this.addAbility(new WhiteManaAbility());
         this.addAbility(new SimpleActivatedAbility(Zone.BATTLEFIELD, new BecomesCreatureSourceEffect(new StirringWildwoodToken(), "land", Duration.EndOfTurn), new ManaCostsImpl("{1}{G}{W}")));

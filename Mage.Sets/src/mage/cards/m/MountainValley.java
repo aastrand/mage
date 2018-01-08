@@ -46,7 +46,7 @@ public class MountainValley extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Mountain Valley enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}, Sacrifice Mountain Valley: Search your library for a Mountain or Forest card and put it onto the battlefield. Then shuffle your library.
         this.addAbility(new FetchLandActivatedAbility(false, EnumSet.of(SubType.MOUNTAIN, SubType.FOREST)));
 

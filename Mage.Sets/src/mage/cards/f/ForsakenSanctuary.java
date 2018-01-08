@@ -27,13 +27,14 @@
  */
 package mage.cards.f;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldTappedAbility;
 import mage.abilities.mana.BlackManaAbility;
 import mage.abilities.mana.WhiteManaAbility;
 import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
+
+import java.util.UUID;
 
 /**
  *
@@ -45,7 +46,7 @@ public class ForsakenSanctuary extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Forsaken Sanctuary enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {W} or {B} to your mana pool.
         this.addAbility(new WhiteManaAbility());

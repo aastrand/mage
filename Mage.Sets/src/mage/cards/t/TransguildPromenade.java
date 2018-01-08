@@ -46,7 +46,7 @@ public class TransguildPromenade extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Transguild Promenade enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // When Transguild Promenade enters the battlefield, sacrifice it unless you pay {1}.
         this.addAbility(new EntersBattlefieldTriggeredAbility(new SacrificeSourceUnlessPaysEffect(new GenericManaCost(1))));
         // {T}: Add one mana of any color to your mana pool.

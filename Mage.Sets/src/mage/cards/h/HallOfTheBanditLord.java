@@ -64,7 +64,7 @@ public class HallOfTheBanditLord extends CardImpl {
         addSuperType(SuperType.LEGENDARY);
 
         // Hall of the Bandit Lord enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}, Pay 3 life: Add {C} to your mana pool. If that mana is spent on a creature spell, it gains haste.
         Mana mana = Mana.ColorlessMana(1);

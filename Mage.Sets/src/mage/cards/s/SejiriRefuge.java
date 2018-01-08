@@ -46,7 +46,7 @@ public class SejiriRefuge extends CardImpl {
 
     public SejiriRefuge(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new EntersBattlefieldTriggeredAbility(new GainLifeEffect(1), false));
         this.addAbility(new WhiteManaAbility());
         this.addAbility(new BlueManaAbility());

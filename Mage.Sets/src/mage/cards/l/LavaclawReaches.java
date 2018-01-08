@@ -56,7 +56,7 @@ public class LavaclawReaches extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
 
         // Lavaclaw Reaches enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {T}: Add {B} or {R} to your mana pool.
         this.addAbility(new BlackManaAbility());
         this.addAbility(new RedManaAbility());

@@ -50,7 +50,7 @@ public class SulfurVent extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Sulfur Vent enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {B} to your mana pool.
         this.addAbility(new BlackManaAbility());
         // {tap}, Sacrifice Sulfur Vent: Add {U}{R} to your mana pool.

@@ -45,7 +45,7 @@ public class UrborgVolcano extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Urborg Volcano enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {B} or {R} to your mana pool.
         this.addAbility(new BlackManaAbility());
         this.addAbility(new RedManaAbility());

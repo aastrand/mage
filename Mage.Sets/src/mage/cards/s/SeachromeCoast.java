@@ -27,7 +27,6 @@
  */
 package mage.cards.s;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldAbility;
 import mage.abilities.condition.Condition;
 import mage.abilities.condition.InvertCondition;
@@ -42,6 +41,8 @@ import mage.constants.CardType;
 import mage.constants.ComparisonType;
 import mage.filter.StaticFilters;
 
+import java.util.UUID;
+
 /**
  *
  * @author maurer.it_at_gmail.com
@@ -54,7 +55,7 @@ public class SeachromeCoast extends CardImpl {
         // Seachrome Coast enters the battlefield tapped unless you control two or fewer other lands.
         Condition controls = new InvertCondition(new PermanentsOnTheBattlefieldCondition(StaticFilters.FILTER_LANDS, ComparisonType.FEWER_THAN, 3));
         String abilityText = " tapped unless you control two or fewer other lands";
-        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText));
+        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText, false));
 
         // {T}: Add {W} or {U} to your mana pool.
         this.addAbility(new WhiteManaAbility());

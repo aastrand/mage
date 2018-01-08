@@ -47,7 +47,7 @@ public class PollutedMire extends CardImpl {
     public PollutedMire(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new CyclingAbility(new ManaCostsImpl("{2}")));
         this.addAbility(new BlackManaAbility());
     }

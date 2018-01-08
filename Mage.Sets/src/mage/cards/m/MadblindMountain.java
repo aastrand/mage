@@ -66,7 +66,7 @@ public class MadblindMountain extends CardImpl {
         this.addAbility(new RedManaAbility());
 
         // Madblind Mountain enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {R}, {tap}: Shuffle your library. Activate this ability only if you control two or more red permanents.
         Ability ability = new ConditionalActivatedAbility(Zone.BATTLEFIELD,

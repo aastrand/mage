@@ -62,7 +62,7 @@ public class GlacialFortress extends CardImpl {
 
         Condition controls = new InvertCondition(new PermanentsOnTheBattlefieldCondition(filter));
         String abilityText = " tapped unless you control a Plains or an Island";
-        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText));
+        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText, false));
         this.addAbility(new BlueManaAbility());
         this.addAbility(new WhiteManaAbility());
     }

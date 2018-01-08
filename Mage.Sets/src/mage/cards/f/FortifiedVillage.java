@@ -27,7 +27,6 @@
  */
 package mage.cards.f;
 
-import java.util.UUID;
 import mage.abilities.common.AsEntersBattlefieldAbility;
 import mage.abilities.costs.common.RevealTargetFromHandCost;
 import mage.abilities.effects.common.TapSourceUnlessPaysEffect;
@@ -41,6 +40,8 @@ import mage.filter.FilterCard;
 import mage.filter.predicate.Predicates;
 import mage.filter.predicate.mageobject.SubtypePredicate;
 import mage.target.common.TargetCardInHand;
+
+import java.util.UUID;
 
 /**
  *
@@ -60,7 +61,7 @@ public class FortifiedVillage extends CardImpl {
 
         // As Fortified Village enters the battlefield, you may reveal a Forest or Plains card from your hand. If you don't, Fortified Village enters the battlefield tapped.
         this.addAbility(new AsEntersBattlefieldAbility(new TapSourceUnlessPaysEffect(new RevealTargetFromHandCost(new TargetCardInHand(filter))),
-                "you may reveal a Forest or Plains card from your hand. If you don't, {this} enters the battlefield tapped"));
+                "you may reveal a Forest or Plains card from your hand. If you don't, {this} enters the battlefield tapped", false));
 
         // {T}: Add {G} or {W} to your mana pool.
         this.addAbility(new GreenManaAbility());

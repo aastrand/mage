@@ -61,7 +61,7 @@ public class WoodlandCemetery extends CardImpl {
 
         Condition controls = new InvertCondition(new PermanentsOnTheBattlefieldCondition(filter));
         String abilityText = " tapped unless you control a Swamp or a Forest";
-        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText));
+        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText, false));
         this.addAbility(new BlackManaAbility());
         this.addAbility(new GreenManaAbility());
     }

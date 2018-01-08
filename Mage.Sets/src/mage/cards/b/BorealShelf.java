@@ -27,7 +27,6 @@
  */
 package mage.cards.b;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldTappedAbility;
 import mage.abilities.mana.BlueManaAbility;
 import mage.abilities.mana.WhiteManaAbility;
@@ -35,6 +34,8 @@ import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.SuperType;
+
+import java.util.UUID;
 
 /**
  *
@@ -47,7 +48,7 @@ public class BorealShelf extends CardImpl {
         addSuperType(SuperType.SNOW);
 
         // Boreal Shelf enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {W} or {U} to your mana pool.
         this.addAbility(new WhiteManaAbility());
         this.addAbility(new BlueManaAbility());

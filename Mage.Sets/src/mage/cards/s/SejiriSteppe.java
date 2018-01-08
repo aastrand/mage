@@ -47,7 +47,7 @@ public class SejiriSteppe extends CardImpl {
 
     public SejiriSteppe(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         EntersBattlefieldTriggeredAbility ability = new EntersBattlefieldTriggeredAbility(new GainProtectionFromColorTargetEffect(Duration.EndOfTurn), false);
         ability.addTarget(new TargetControlledCreaturePermanent());
         this.addAbility(ability);

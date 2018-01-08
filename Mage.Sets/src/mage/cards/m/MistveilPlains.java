@@ -69,7 +69,7 @@ public class MistveilPlains extends CardImpl {
         this.addAbility(new WhiteManaAbility());
 
         // Mistveil Plains enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {W}, {tap}: Put target card from your graveyard on the bottom of your library. Activate this ability only if you control two or more white permanents.
         Ability ability = new ActivateIfConditionActivatedAbility(

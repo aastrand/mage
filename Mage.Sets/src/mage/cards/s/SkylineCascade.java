@@ -57,7 +57,7 @@ public class SkylineCascade extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Skyline Cascade enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // When Skyline Cascade enters the battlefield, target creature an opponent controls doesn't untap during its controller's next untap step.
         Ability ability = new EntersBattlefieldTriggeredAbility(new DontUntapInControllersNextUntapStepTargetEffect(), false);

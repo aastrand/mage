@@ -27,7 +27,6 @@
  */
 package mage.cards.t;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldTappedAbility;
 import mage.abilities.mana.BlackManaAbility;
 import mage.abilities.mana.RedManaAbility;
@@ -35,6 +34,8 @@ import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.SuperType;
+
+import java.util.UUID;
 
 /**
  *
@@ -47,7 +48,7 @@ public class TresserhornSinks extends CardImpl {
         this.addSuperType(SuperType.SNOW);
 
         // Tresserhorn Sinks enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {B} or {R} to your mana pool.
         this.addAbility(new BlackManaAbility());
         this.addAbility(new RedManaAbility());

@@ -61,7 +61,7 @@ public class RuinsOfOranRief extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Ruins of Oran-Rief enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {T}: Add {C} to your mana pool.
         this.addAbility(new ColorlessManaAbility());
         // {T}: Put a +1/+1 counter on target colorless creature that entered the battlefield this turn.

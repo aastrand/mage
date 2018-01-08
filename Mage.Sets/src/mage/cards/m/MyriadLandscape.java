@@ -62,7 +62,7 @@ public class MyriadLandscape extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Myriad Landscape enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {tap}: Add {C} to your mana pool.
         this.addAbility(new ColorlessManaAbility());

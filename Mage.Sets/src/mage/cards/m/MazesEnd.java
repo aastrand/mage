@@ -70,7 +70,7 @@ public class MazesEnd extends CardImpl {
 
 
         // Maze's End enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add 1 to your mana pool.
         this.addAbility(new ColorlessManaAbility());

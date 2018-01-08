@@ -50,7 +50,7 @@ public class TinderFarm extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Tinder Farm enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {G} to your mana pool.
         this.addAbility(new GreenManaAbility());
         // {tap}, Sacrifice Tinder Farm: Add {R}{W} to your mana pool.

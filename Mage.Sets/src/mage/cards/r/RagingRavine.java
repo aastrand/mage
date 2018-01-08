@@ -60,7 +60,7 @@ public class RagingRavine extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
 
         // Raging Ravine enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // Tap: Add Red or Green to your mana pool.
         this.addAbility(new GreenManaAbility());
         this.addAbility(new RedManaAbility());

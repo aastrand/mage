@@ -45,7 +45,7 @@ public class MeanderingRiver extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Meandering River enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         
         // {T}: Add {W} or {U} to your mana pool.
         this.addAbility(new WhiteManaAbility());

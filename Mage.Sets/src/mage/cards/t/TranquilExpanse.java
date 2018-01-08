@@ -45,7 +45,7 @@ public class TranquilExpanse extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Tranquil Expanse enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         
         // {T}: Add {G} or {W} to your mana pool.
         this.addAbility(new GreenManaAbility());

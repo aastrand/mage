@@ -46,7 +46,7 @@ public class RemoteIsle extends CardImpl {
     public RemoteIsle(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new BlueManaAbility());
         this.addAbility(new CyclingAbility(new ManaCostsImpl("{2}")));
     }

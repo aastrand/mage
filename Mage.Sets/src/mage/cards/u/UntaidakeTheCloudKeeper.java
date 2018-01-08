@@ -27,7 +27,6 @@
  */
 package mage.cards.u;
 
-import java.util.UUID;
 import mage.ConditionalMana;
 import mage.MageObject;
 import mage.Mana;
@@ -47,6 +46,8 @@ import mage.constants.CardType;
 import mage.constants.SuperType;
 import mage.game.Game;
 
+import java.util.UUID;
+
 /**
  *
  * @author anonymous
@@ -58,7 +59,7 @@ public class UntaidakeTheCloudKeeper extends CardImpl {
         this.addSuperType(SuperType.LEGENDARY);
 
         // Untaidake, the Cloud Keeper enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}, Pay 2 life: Add {C}{C} to your mana pool. Spend this mana only to cast legendary spells.
         Ability ability = new ConditionalColorlessManaAbility(new TapSourceCost(), 2, new LegendarySpellManaBuilder());
         ability.addCost(new PayLifeCost(2));

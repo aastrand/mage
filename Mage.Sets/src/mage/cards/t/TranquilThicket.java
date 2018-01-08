@@ -46,7 +46,7 @@ public class TranquilThicket extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Tranquil Thicket enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {G} to your mana pool.
         this.addAbility(new GreenManaAbility());
         // Cycling {G}

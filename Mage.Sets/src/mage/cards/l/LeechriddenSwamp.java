@@ -71,7 +71,7 @@ public class LeechriddenSwamp extends CardImpl {
         this.addAbility(new SimpleManaAbility(Zone.BATTLEFIELD, Mana.BlackMana(1), new TapSourceCost()));
 
         // Leechridden Swamp enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {B}, {tap}: Each opponent loses 1 life. Activate this ability only if you control two or more black permanents.
         Ability ability = new ActivateIfConditionActivatedAbility(Zone.BATTLEFIELD,

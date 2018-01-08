@@ -55,7 +55,7 @@ public class ScatteredGroves extends CardImpl {
         this.addAbility(new WhiteManaAbility());
 
         // Scattered Groves enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // Cycling {2}
         this.addAbility(new CyclingAbility(new ManaCostsImpl("{2}")));

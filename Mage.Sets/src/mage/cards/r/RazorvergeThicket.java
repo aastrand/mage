@@ -27,7 +27,6 @@
  */
 package mage.cards.r;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldAbility;
 import mage.abilities.condition.Condition;
 import mage.abilities.condition.InvertCondition;
@@ -42,6 +41,8 @@ import mage.constants.CardType;
 import mage.constants.ComparisonType;
 import mage.filter.StaticFilters;
 
+import java.util.UUID;
+
 /**
  *
  * @author maurer.it_at_gmail.com
@@ -53,7 +54,7 @@ public class RazorvergeThicket extends CardImpl {
 
         Condition controls = new InvertCondition(new PermanentsOnTheBattlefieldCondition(StaticFilters.FILTER_LANDS, ComparisonType.FEWER_THAN, 3));
         String abilityText = " tapped unless you control two or fewer other lands";
-        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText));
+        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText, false));
 
         this.addAbility(new GreenManaAbility());
         this.addAbility(new WhiteManaAbility());

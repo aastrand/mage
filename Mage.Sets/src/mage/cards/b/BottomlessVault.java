@@ -27,7 +27,6 @@
  */
 package mage.cards.b;
 
-import java.util.UUID;
 import mage.Mana;
 import mage.abilities.Ability;
 import mage.abilities.common.BeginningOfUpkeepTriggeredAbility;
@@ -50,6 +49,8 @@ import mage.constants.TargetController;
 import mage.constants.Zone;
 import mage.counters.CounterType;
 
+import java.util.UUID;
+
 /**
  *
  * @author anonymous
@@ -60,7 +61,7 @@ public class BottomlessVault extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Bottomless Vault enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // You may choose not to untap Bottomless Vault during your untap step.
         this.addAbility(new SkipUntapOptionalAbility());
         // At the beginning of your upkeep, if Bottomless Vault is tapped, put a storage counter on it.

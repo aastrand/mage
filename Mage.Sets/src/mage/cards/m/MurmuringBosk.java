@@ -27,7 +27,6 @@
  */
 package mage.cards.m;
 
-import java.util.UUID;
 import mage.abilities.Ability;
 import mage.abilities.common.AsEntersBattlefieldAbility;
 import mage.abilities.costs.common.RevealTargetFromHandCost;
@@ -43,6 +42,8 @@ import mage.constants.SubType;
 import mage.filter.FilterCard;
 import mage.filter.predicate.mageobject.SubtypePredicate;
 import mage.target.common.TargetCardInHand;
+
+import java.util.UUID;
 
 /**
  *
@@ -63,7 +64,7 @@ public class MurmuringBosk extends CardImpl {
         // <i>({tap}: Add {G} to your mana pool.)</i>
         this.addAbility(new GreenManaAbility());
         // As Murmuring Bosk enters the battlefield, you may reveal a Treefolk card from your hand. If you don't, Murmuring Bosk enters the battlefield tapped.
-        this.addAbility(new AsEntersBattlefieldAbility(new TapSourceUnlessPaysEffect(new RevealTargetFromHandCost(new TargetCardInHand(filter))), "you may reveal a Treefolk card from your hand. If you don't, {this} enters the battlefield tapped"));
+        this.addAbility(new AsEntersBattlefieldAbility(new TapSourceUnlessPaysEffect(new RevealTargetFromHandCost(new TargetCardInHand(filter))), "you may reveal a Treefolk card from your hand. If you don't, {this} enters the battlefield tapped", false));
         // {tap}: Add {W} or {B} to your mana pool. Murmuring Bosk deals 1 damage to you.
         Ability ability = new WhiteManaAbility();
         ability.addEffect(new DamageControllerEffect(1));

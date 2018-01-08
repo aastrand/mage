@@ -68,7 +68,7 @@ public class MistveinBorderpost extends CardImpl {
         this.addAbility(ability);
 
          // Mistvein Borderpost enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // Tap: Add {U} or {B} to your mana pool.
         this.addAbility(new BlueManaAbility());

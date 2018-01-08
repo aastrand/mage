@@ -46,7 +46,7 @@ public class PiranhaMarsh extends CardImpl {
     public PiranhaMarsh(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new BlackManaAbility());
         EntersBattlefieldTriggeredAbility ability = new EntersBattlefieldTriggeredAbility(new LoseLifeTargetEffect(1));
         ability.addTarget(new TargetPlayer());

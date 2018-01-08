@@ -45,7 +45,7 @@ public class WoodlandStream extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Woodland Stream enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {G} or {U} to your mana pool.
         this.addAbility(new GreenManaAbility());

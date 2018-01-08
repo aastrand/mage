@@ -47,7 +47,7 @@ public class GolgariGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Golgari Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {B} or {G} to your mana pool.
         this.addAbility(new BlackManaAbility());

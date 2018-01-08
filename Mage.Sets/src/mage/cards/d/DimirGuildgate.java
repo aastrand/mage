@@ -48,7 +48,7 @@ public class DimirGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Dimir Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {U} or {B} to your manapool.
         this.addAbility(new BlueManaAbility());

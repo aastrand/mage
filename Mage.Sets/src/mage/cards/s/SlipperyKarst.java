@@ -46,7 +46,7 @@ public class SlipperyKarst extends CardImpl {
     public SlipperyKarst(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new GreenManaAbility());
         this.addAbility(new CyclingAbility(new ManaCostsImpl("{2}")));
     }

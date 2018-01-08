@@ -47,7 +47,7 @@ public class IzzetGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Izzet Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {U} or {R} to your mana pool.
         this.addAbility(new BlueManaAbility());

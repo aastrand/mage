@@ -50,7 +50,7 @@ public class RuinsOfTrokair extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Ruins of Trokair enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {W} to your mana pool.
         this.addAbility(new WhiteManaAbility());
         // {tap}, Sacrifice Ruins of Trokair: Add {W}{W} to your mana pool.

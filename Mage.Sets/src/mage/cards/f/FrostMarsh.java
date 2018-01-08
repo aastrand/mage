@@ -27,7 +27,6 @@
  */
 package mage.cards.f;
 
-import java.util.UUID;
 import mage.abilities.common.EntersBattlefieldTappedAbility;
 import mage.abilities.mana.BlackManaAbility;
 import mage.abilities.mana.BlueManaAbility;
@@ -35,6 +34,8 @@ import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.SuperType;
+
+import java.util.UUID;
 
 /**
  *
@@ -47,7 +48,7 @@ public class FrostMarsh extends CardImpl {
         addSuperType(SuperType.SNOW);
 
         // Frost Marsh enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {U} or {B} to your mana pool.
         this.addAbility(new BlueManaAbility());
         this.addAbility(new BlackManaAbility());

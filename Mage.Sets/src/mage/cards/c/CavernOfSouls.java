@@ -64,7 +64,7 @@ public class CavernOfSouls extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // As Cavern of Souls enters the battlefield, choose a creature type.
-        this.addAbility(new AsEntersBattlefieldAbility(new ChooseCreatureTypeEffect(Outcome.BoostCreature)));
+        this.addAbility(new AsEntersBattlefieldAbility(new ChooseCreatureTypeEffect(Outcome.BoostCreature), null, false));
 
         // {T}: Add {C} to your mana pool.
         this.addAbility(new ColorlessManaAbility());

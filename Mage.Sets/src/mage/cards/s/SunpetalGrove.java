@@ -62,7 +62,7 @@ public class SunpetalGrove extends CardImpl {
 
         Condition controls = new InvertCondition(new PermanentsOnTheBattlefieldCondition(filter));
         String abilityText = " tapped unless you control a Forest or a Plains";
-        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText));
+        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText, false));
         this.addAbility(new GreenManaAbility());
         this.addAbility(new WhiteManaAbility());
     }

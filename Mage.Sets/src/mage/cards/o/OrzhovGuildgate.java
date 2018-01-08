@@ -48,7 +48,7 @@ public class OrzhovGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Orzhov Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {W} or {B} to your mana pool.
         this.addAbility(new WhiteManaAbility());

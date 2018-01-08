@@ -54,7 +54,7 @@ public class ShamblingVent extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Shambling Vent enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {W} or {B} to your mana pool.
         this.addAbility(new WhiteManaAbility());

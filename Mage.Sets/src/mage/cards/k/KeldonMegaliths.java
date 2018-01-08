@@ -27,7 +27,6 @@
  */
 package mage.cards.k;
 
-import java.util.UUID;
 import mage.abilities.Ability;
 import mage.abilities.common.EntersBattlefieldTappedAbility;
 import mage.abilities.condition.common.HellbentCondition;
@@ -41,6 +40,8 @@ import mage.constants.CardType;
 import mage.constants.Zone;
 import mage.target.common.TargetCreatureOrPlayer;
 
+import java.util.UUID;
+
 /**
  *
  * @author anonymous
@@ -51,7 +52,7 @@ public class KeldonMegaliths extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Keldon Megaliths enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {R} to your mana pool.
         this.addAbility(new RedManaAbility());
         // Hellbent - {1}{R}, {tap}: Keldon Megaliths deals 1 damage to target creature or player. Activate this ability only if you have no cards in hand.

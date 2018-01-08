@@ -62,7 +62,7 @@ public class ClifftopRetreat extends CardImpl {
 
         Condition controls = new InvertCondition(new PermanentsOnTheBattlefieldCondition(filter));
         String abilityText = " tapped unless you control a Mountain or a Plains";
-        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText));
+        this.addAbility(new EntersBattlefieldAbility(new ConditionalOneShotEffect(new TapSourceEffect(), controls, abilityText), abilityText, false));
         this.addAbility(new RedManaAbility());
         this.addAbility(new WhiteManaAbility());
     }

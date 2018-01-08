@@ -47,7 +47,7 @@ public class RakdosGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Rakdos Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {B} or {R} to your mana pool.
         this.addAbility(new BlackManaAbility());

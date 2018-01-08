@@ -45,7 +45,7 @@ public class SavageLands extends CardImpl {
 
     public SavageLands(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new RedManaAbility());
         this.addAbility(new GreenManaAbility());
         this.addAbility(new BlackManaAbility());

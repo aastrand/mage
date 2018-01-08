@@ -64,7 +64,7 @@ public class ValakutTheMoltenPinnacle extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
 
         // Valakut, the Molten Pinnacle enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // Whenever a Mountain enters the battlefield under your control, if you control at least five other Mountains, you may have Valakut, the Molten Pinnacle deal 3 damage to target creature or player.
         this.addAbility(new ValakutTheMoltenPinnacleTriggeredAbility());
         // {T}: Add {R} to your mana pool.

@@ -67,7 +67,7 @@ public class MoonringIsland extends CardImpl {
         this.addAbility(new BlueManaAbility());
 
         // Moonring Island enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {U}, {tap}: Look at the top card of target player's library. Activate this ability only if you control two or more blue permanents.
         Ability ability = new ConditionalActivatedAbility(Zone.BATTLEFIELD,

@@ -52,7 +52,7 @@ public class TeferisIsle extends CardImpl {
         // Phasing
         this.addAbility(PhasingAbility.getInstance());
         // Teferi's Isle enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {tap}: Add {U}{U} to your mana pool.
         this.addAbility(new SimpleManaAbility(Zone.BATTLEFIELD, Mana.BlueMana(2), new TapSourceCost()));
 

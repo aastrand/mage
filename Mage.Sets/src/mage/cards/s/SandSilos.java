@@ -60,7 +60,7 @@ public class SandSilos extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Sand Silos enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // You may choose not to untap Sand Silos during your untap step.
         this.addAbility(new SkipUntapOptionalAbility());
         // At the beginning of your upkeep, if Sand Silos is tapped, put a storage counter on it.

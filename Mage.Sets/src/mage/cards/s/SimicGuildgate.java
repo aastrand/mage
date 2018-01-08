@@ -48,7 +48,7 @@ public class SimicGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Simic Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}:Add {U} or {G} to your mana pool.
         this.addAbility(new BlueManaAbility());

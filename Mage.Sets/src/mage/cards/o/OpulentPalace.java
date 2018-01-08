@@ -46,7 +46,7 @@ public class OpulentPalace extends CardImpl {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},"");
 
         // Opulent Palace enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         // {T}: Add {B}, {G}, or {U} to your mana pool.
         this.addAbility(new BlackManaAbility());
         this.addAbility(new GreenManaAbility());

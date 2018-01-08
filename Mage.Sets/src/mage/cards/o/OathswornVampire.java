@@ -63,7 +63,7 @@ public class OathswornVampire extends CardImpl {
         this.toughness = new MageInt(2);
 
         // Oathsworn Vampire enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // You may cast Oathsworn Vampire from your graveyard if you gained life this turn.
         this.addAbility(new SimpleStaticAbility(Zone.ALL, new OathswornVampirePlayEffect()), new PlayerGainedLifeWatcher());

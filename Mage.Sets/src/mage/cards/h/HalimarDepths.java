@@ -46,7 +46,7 @@ public class HalimarDepths extends CardImpl {
     public HalimarDepths(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
                 // Halimar Depths enters the battlefield tapped.
-                this.addAbility(new EntersBattlefieldTappedAbility());
+                this.addAbility(new EntersBattlefieldTappedAbility(false));
                 // When Halimar Depths enters the battlefield, look at the top three cards of your library, then put them back in any order.
         this.addAbility(new EntersBattlefieldTriggeredAbility(new LookLibraryControllerEffect(3)));
         this.addAbility(new BlueManaAbility());

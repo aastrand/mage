@@ -45,7 +45,7 @@ public class SeasideCitadel extends CardImpl {
 
     public SeasideCitadel (UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.LAND},null);
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
         this.addAbility(new GreenManaAbility());
         this.addAbility(new WhiteManaAbility());
         this.addAbility(new BlueManaAbility());

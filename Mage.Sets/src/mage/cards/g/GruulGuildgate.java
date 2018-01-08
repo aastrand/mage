@@ -48,7 +48,7 @@ public class GruulGuildgate extends CardImpl {
         this.subtype.add(SubType.GATE);
 
         // Gruul Guildgate enters the battlefield tapped.
-        this.addAbility(new EntersBattlefieldTappedAbility());
+        this.addAbility(new EntersBattlefieldTappedAbility(false));
 
         // {T}: Add {R} or {G} to your mana pool.
         this.addAbility(new RedManaAbility());
