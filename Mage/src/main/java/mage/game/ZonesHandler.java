@@ -1,11 +1,11 @@
 package mage.game;
 
-import java.util.*;
 import mage.cards.Card;
 import mage.cards.Cards;
 import mage.cards.CardsImpl;
 import mage.cards.MeldCard;
 import mage.constants.Outcome;
+import mage.constants.SuperType;
 import mage.constants.Zone;
 import mage.filter.FilterCard;
 import mage.game.command.Commander;
@@ -16,6 +16,13 @@ import mage.game.permanent.PermanentMeld;
 import mage.game.stack.Spell;
 import mage.players.Player;
 import mage.target.TargetCard;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Created by samuelsandeen on 9/6/16.
@@ -236,6 +243,12 @@ public final class ZonesHandler {
                 // make sure the controller of all continuous effects of this card are switched to the current controller
                 game.setScopeRelevant(true);
                 game.getContinuousEffects().setController(permanent.getId(), permanent.getControllerId());
+
+                // IMA Blood Moon change: Apply continuous effects if a non-basic land is entering
+                if (permanent.isLand() && !permanent.getSuperType().contains(SuperType.BASIC)) {
+                    game.getContinuousEffects().apply(game);
+                }
+
                 if (permanent.entersBattlefield(event.getSourceId(), game, fromZone, true)
                         && card.removeFromZone(game, fromZone, event.getSourceId())) {
                     success = true;

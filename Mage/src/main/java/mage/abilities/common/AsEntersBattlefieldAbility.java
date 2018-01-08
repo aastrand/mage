@@ -47,8 +47,16 @@ public class AsEntersBattlefieldAbility extends StaticAbility {
         this(effect, text, EnterEventType.OTHER);
     }
 
+    public AsEntersBattlefieldAbility(Effect effect, String text, boolean selfScope) {
+        this(effect, text, EnterEventType.OTHER, selfScope);
+    }
+
     public AsEntersBattlefieldAbility(Effect effect, String text, EnterEventType enterEventType) {
-        super(Zone.ALL, new EntersBattlefieldEffect(effect, null, text, true, false, enterEventType));
+        this(effect, text, enterEventType, true);
+    }
+
+    public AsEntersBattlefieldAbility(Effect effect, String text, EnterEventType enterEventType, boolean selfScope) {
+        super(Zone.ALL, new EntersBattlefieldEffect(effect, null, text, selfScope, false, enterEventType));
     }
 
     public AsEntersBattlefieldAbility(final AsEntersBattlefieldAbility ability) {

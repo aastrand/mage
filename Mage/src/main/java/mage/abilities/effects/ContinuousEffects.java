@@ -27,17 +27,27 @@
  */
 package mage.abilities.effects;
 
-import java.io.Serializable;
-import java.util.*;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
 import mage.MageObject;
-import mage.abilities.*;
+import mage.abilities.Ability;
+import mage.abilities.ActivatedAbility;
+import mage.abilities.MageSingleton;
+import mage.abilities.SpellAbility;
+import mage.abilities.StaticAbility;
 import mage.abilities.effects.common.continuous.CommanderReplacementEffect;
 import mage.abilities.keyword.SpliceOntoArcaneAbility;
 import mage.cards.Cards;
 import mage.cards.CardsImpl;
-import mage.constants.*;
+import mage.constants.AbilityType;
+import mage.constants.AsThoughEffectType;
+import mage.constants.CostModificationType;
+import mage.constants.Duration;
+import mage.constants.EffectType;
+import mage.constants.Layer;
+import mage.constants.ManaType;
+import mage.constants.Outcome;
+import mage.constants.SpellAbilityType;
+import mage.constants.SubLayer;
+import mage.constants.Zone;
 import mage.filter.FilterCard;
 import mage.filter.predicate.Predicate;
 import mage.filter.predicate.Predicates;
@@ -53,6 +63,22 @@ import mage.players.ManaPoolItem;
 import mage.players.Player;
 import mage.target.common.TargetCardInHand;
 import org.apache.log4j.Logger;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.EnumMap;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * @author BetaSteward_at_googlemail.com
@@ -360,6 +386,7 @@ public class ContinuousEffects implements Serializable {
                     if (!effect.isUsed()) {
                         if (!game.getScopeRelevant()
                                 || effect.hasSelfScope()
+                                || (game.getScopeRelevant() && !effect.hasSelfScope())
                                 || !event.getTargetId().equals(ability.getSourceId())) {
                             if (effect.applies(event, ability, game)) {
                                 applicableAbilities.add(ability);

@@ -59,6 +59,10 @@ public class EntersBattlefieldEffect extends ReplacementEffectImpl {
         this(baseEffect, "");
     }
 
+    public EntersBattlefieldEffect(Effect baseEffect, boolean selfScope) {
+        this(baseEffect, null, "", selfScope, false);
+    }
+
     public EntersBattlefieldEffect(Effect baseEffect, String text) {
         this(baseEffect, null, text, true, false);
     }

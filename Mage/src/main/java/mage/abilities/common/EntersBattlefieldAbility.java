@@ -60,22 +60,30 @@ public class EntersBattlefieldAbility extends StaticAbility {
         this(effect, null, null, effectText);
     }
 
+    public EntersBattlefieldAbility(Effect effect, String effectText, boolean selfScope) {
+        this(effect, false, null, null, effectText, selfScope);
+    }
+
     public EntersBattlefieldAbility(Effect effect, Condition condition, String abilityRule, String effectText) {
         this(effect, false, condition, abilityRule, effectText);
     }
 
-    /**
-     *
-     * @param effect effect that happens when the permanent enters the
-     * battlefield
-     * @param optional
-     * @param condition only if this condition is true, the effect will happen
-     * @param abilityRule rule for this ability (no text from effects will be
-     * added)
-     * @param effectText this text will be used for the EnterBattlefieldEffect
-     */
     public EntersBattlefieldAbility(Effect effect, boolean optional, Condition condition, String abilityRule, String effectText) {
-        super(Zone.ALL, new EntersBattlefieldEffect(effect, condition, effectText, true, optional));
+        this(effect, false, condition, abilityRule, effectText, true);
+    }
+        /**
+         *
+         * @param effect effect that happens when the permanent enters the
+         * battlefield
+         * @param optional
+         * @param condition only if this condition is true, the effect will happen
+         * @param abilityRule rule for this ability (no text from effects will be
+         * added)
+         * @param effectText this text will be used for the EnterBattlefieldEffect
+         * @param selfScope
+         */
+    public EntersBattlefieldAbility(Effect effect, boolean optional, Condition condition, String abilityRule, String effectText, boolean selfScope) {
+        super(Zone.ALL, new EntersBattlefieldEffect(effect, condition, effectText, selfScope, optional));
         this.abilityRule = abilityRule;
         this.optional = optional;
     }

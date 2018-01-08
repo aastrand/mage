@@ -44,6 +44,10 @@ public class EntersBattlefieldTappedAbility extends StaticAbility {
         super(Zone.ALL, new EntersBattlefieldEffect(new TapSourceEffect(true)));
     }
 
+    public EntersBattlefieldTappedAbility(boolean selfScope) {
+        super(Zone.ALL, new EntersBattlefieldEffect(new TapSourceEffect(true), selfScope));
+    }
+
     public EntersBattlefieldTappedAbility(String ruleText) {
         this();
         this.ruleText = ruleText;
